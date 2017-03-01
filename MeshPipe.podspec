@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |core|
     core.source_files  = "MeshPipe/*.{h,m}"
     core.exclude_files = "MeshPipe/main.m"
-    core.public_header_files = "MeshPipe/MeshPipe.h"
+    #core.public_header_files = "MeshPipe/MeshPipe.h"
     core.header_mappings_dir = 'Cerfing'
     core.dependency "CocoaAsyncSocket", '~> 7.4'
     core.dependency "GZIP", '~> 1.1'
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
 
   s.subspec "CerfingMeshPipe" do |cerf|
     cerf.source_files        = "MeshPipe/CerfingMeshPipeTransport/*.{h,m}"
-    cerf.public_header_files = "MeshPipe/CerfingMeshPipeTransport/*.h"
+    #cerf.public_header_files = "MeshPipe/CerfingMeshPipeTransport/*.h"
     cerf.exclude_files       = "MeshPipe/CerfingMeshPipeTransport/main.m"
     cerf.dependency "Cerfing"
     cerf.dependency "MeshPipe/Core"
